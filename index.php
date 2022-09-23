@@ -35,12 +35,20 @@
         <?php foreach ($result as $product) : ?>
             <div class="product" style="border: 1px solid black;">
                 <h3><?= $product ['SKU'] ?></h3>
-                <p><?=$product ['Name'] ?></p>
-                <p><?=$product ['Price'] ?></p>
+                <p><?= $product ['Name'] ?></p>
+                <p><?= $product ['Price'] ?></p>
 
-                <p><?=$product ['Size'] ?></p>
-                <p><?=$product ['Weight'] ?></p>
-                <p><?=$product ['Height'] ?> <?=$product ['Width'] ?> <?=$product ['Length'] ?> </p>
+                <?php if($product ['Size']!=null) : ?>
+                    <p>Size: <?=$product ['Size']?>MB</p>
+                <?php endif ?>
+
+                <?php if($product ['Weight']!=null) : ?>
+                    <p>Weight: <?=$product ['Weight'] ?>KG</p>
+                <?php endif ?>
+                
+                <?php if($product ['Height']!=null) : ?>
+                    <p>Dimension:<?=$product ['Height'] ?> x <?=$product ['Width'] ?> x <?=$product ['Length'] ?></p>
+                <?php endif ?>
 
             </div>
 
