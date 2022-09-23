@@ -22,9 +22,11 @@
             if(document.contains(document.getElementById('newinput')))
                 document.getElementById('newinput').remove();
 
-                newDiv = document.createElement("div");
-                newDiv.id="newinput";
-                document.getElementById('addform').appendChild(newDiv);
+
+            newDiv = document.createElement("div");
+            newDiv.id="newinput";
+            document.getElementById('addform').appendChild(newDiv);
+
 
             if(value=="DVD"){
                 var input = document.createElement("input");
@@ -33,16 +35,14 @@
                 input.id="Size";
                 input.placeholder="input size: ";
                 document.getElementById('newinput').appendChild(input);
-            }
-            else if(value=="Book"){
+            }else if(value=="Book"){
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Weight";
                 input.id="Weight";
                 input.placeholder="input weight: ";
                 document.getElementById('newinput').appendChild(input);
-            }
-            else{
+            }else{
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Height";

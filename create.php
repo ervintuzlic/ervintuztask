@@ -13,63 +13,22 @@
 
                 if($selected == "DVD"){
                     $Size = $_POST['Size']; 
-
                     $dvd = new DVD();
-                    
-                    $conn = new mysqli("localhost", "root", "", "ervintuz");
-                    
-                    if ($conn->connect_error) {
-                      die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $sql = "INSERT INTO products  (SKU, Name, Price, Size)
-                    VALUES ('$SKU', '$Name', '$Price', '$Size')";
-
-                    $conn->query($sql);
-                    $conn->close();
-                    header("refresh:0, url=index.php");
+                    $dvd->insertDataDVD($SKU, $Name, $Price, $Size);
                 }
 
                 else if($selected == "Book"){
                     $Weight = $_POST['Weight'];
-
                     $book = new Book();
-                    
-                    $conn = new mysqli("localhost", "root", "", "ervintuz");
-                    
-                    if ($conn->connect_error) {
-                      die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $sql = "INSERT INTO products  (SKU, Name, Price, Weight)
-                    VALUES ('$SKU', '$Name', '$Price', '$Weight')";
-
-                    $conn->query($sql);
-
-                    $conn->close();
-                    header("refresh:0, url=index.php");
+                    $book->insertDataBook($SKU, $Name, $Price, $Weight);
                 }
 
                 else{
                     $Width = $_POST['Width'];
                     $Height = $_POST['Height'];
                     $Length = $_POST['Length'];
-
                     $furniture = new Furniture();
-                    
-                    $conn = new mysqli("localhost", "root", "", "ervintuz");
-                    
-                    if ($conn->connect_error) {
-                      die("Connection failed: " . $conn->connect_error);
-                    }
-
-                    $sql = "INSERT INTO products  (SKU, Name, Price, Height, Width, Length)
-                    VALUES ('$SKU', '$Name', '$Price', '$Height', '$Width', '$Length')";
-
-                    $conn->query($sql);
-
-                    $conn->close();
-                    header("refresh:0, url=index.php");
+                    $furniture->insertDataFurniture($SKU, $Name, $Price, $Height, $Width, $Length);
                 }
             } else {
                 echo 'Please select the value.';
