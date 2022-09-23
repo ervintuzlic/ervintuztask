@@ -38,9 +38,9 @@
         <?php if ($result->rowCount() > 0) : ?>
             <?php foreach ($result as $product) : ?>
                 <div class="product ajax-del" style="border: 1px solid black;">
-                    <input type="checkbox" id="<?php echo $product['Id'] ?>" name="Id"></<input>
-                    <h3>SKU: <?= $product ['SKU'] ?></h3>
-                    <p>Name: <?= $product ['Name'] ?></p>
+                    <input type="checkbox" id="<?php echo $product['Id'] ?>" class="delete-checkbox" name="Id"></<input>
+                    <h3><?= $product ['SKU'] ?></h3>
+                    <p><?= $product ['Name'] ?></p>
                     <p>Price: <?= $product ['Price'] ?>$</p>
 
                     <?php if($product ['Size']!=null) : ?>

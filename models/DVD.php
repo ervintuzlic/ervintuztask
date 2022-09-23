@@ -15,7 +15,7 @@ class DVD extends Product {
         return $this->size=$size;
     }
 
-    public function insertDataDVD(int $sku, string $name, int $price, int $size){                 
+    public function insertDataDVD(string $sku, string $name, int $price, int $size){                 
         $conn = new mysqli("localhost", "root", "", "ervintuz");
                     
         if ($conn->connect_error) {

@@ -19,7 +19,7 @@ class Furniture extends Product {
         return $this->width=$width && $this->height=$height && $this->length=$length;
     }
 
-    public function insertDataFurniture(int $sku, string $name, int $price, int $height, int $width, int $length){
+    public function insertDataFurniture(string $sku, string $name, int $price, int $height, int $width, int $length){
                             
         $conn = new mysqli("localhost", "root", "", "ervintuz");
                     

@@ -1,6 +1,6 @@
 <div>
         <form action="create.php" id="addform" method="post">
-            <input type="number" name="SKU" id="SKU" placeholder="input SKU: "></input>
+            <input type="text" name="SKU" id="SKU" placeholder="input SKU: "></input>
             <input type="text" name="Name" id="Name" placeholder="input name: "></input>
             <input type="number" name="Price" id="Price" placeholder="input price: "></input>
 

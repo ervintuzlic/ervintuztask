@@ -15,7 +15,7 @@ class Book extends Product {
         return $this->weight=$weight;
     }
 
-    public function insertDataBook(int $sku, string $name, int $price, int $weight){
+    public function insertDataBook(string $sku, string $name, int $price, int $weight){
         $conn = new mysqli("localhost", "root", "", "ervintuz");
             
         if ($conn->connect_error) {

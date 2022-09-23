@@ -25,3 +25,7 @@
     height: 150px;
     text-align: center;
 }
+
+.delete-checkbox{
+    position: absolute;
+}
