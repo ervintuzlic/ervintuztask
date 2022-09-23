@@ -12,10 +12,10 @@
 }
 
 .container{
-    width: 60%;
+    width: 70%;
     display: grid;
-    row-gap: 30px;
-    column-gap: 30px;
+    row-gap: 50px;
+    column-gap: 50px;
     grid-template-columns: auto auto auto auto;
 }
 
