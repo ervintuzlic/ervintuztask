@@ -3,11 +3,9 @@
     require("data/data.php");
 
     try {
-        // Create sql statement
         $sql = "SELECT * FROM products";
         $result = $conn->query($sql);
     
-        // error output
     } catch (Exception $e) {
         echo "Error " . $e->getMessage(); 
         exit();
