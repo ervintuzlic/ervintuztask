@@ -20,18 +20,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
+<header>
+    <link rel="stylesheet" href="css/style.css" />
+</header>
 <body>
 
-
-    <form action="add.php">
-    <button>Add Product</button>
-    </form>
-    <div>
-        <button type="button" id="delete">Mass Delete</button>
+    <div class="header">
+        <h1>Product List</h1>
+        <div class="header-right">
+            <form action="add.php">
+                <button id="addbutton">Add Product</button>
+            </form>
+            <button type="button" id="delete">Mass Delete</button>
+        </div>
     </div>
-
 
     <div class="main-container">
         <div class="container">

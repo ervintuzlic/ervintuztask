@@ -2,6 +2,13 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    font-family:sans-serif;
+}
+.header{
+    background-color:rgb(22, 22, 22);
+}
+.header h1{
+    color:white;
 }
 
 .main-container{
@@ -27,4 +34,89 @@
 }
 .delete-checkbox{
     position: absolute;
+    margin-left:1rem;
+    margin-bottom: 6rem;
+}
+
+.header{
+    justify-content: space-around;
+    display:flex;
+    align-items: center;
+    width: 100%;
+    height:140px;
+}
+
+.header button {
+    width: 120px;
+    height: 40px;
+    border: 2px solid rgb(0, 174, 255);
+    background: none;
+    border-radius: 10px;
+    color:rgb(0, 174, 255);
+    transition: 0.2s ease-in-out;
+    font-weight: bold;
+}
+
+.header-right{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+
+#addbutton:hover{
+    cursor:pointer;
+    background: rgb(0, 174, 255);
+    color:white;
+}
+
+#delete{
+    background: none;
+    color:rgb(223, 74, 74);
+    border: 2px solid rgb(223, 74, 74);
+    transition: 0.2s ease-in-out;
+}
+#delete:hover{
+    cursor:pointer;
+    color:white;
+    background-color:rgb(223, 74, 74);
+}
+
+#cancel{
+    background: none;
+    color:rgb(223, 74, 74);
+    border: 2px solid rgb(223, 74, 74);
+    transition: 0.2s ease-in-out;
+}
+#cancel:hover{
+    cursor:pointer;
+    color:white;
+    background-color:rgb(223, 74, 74);
+}
+
+.add-container form{
+    display:flex;
+    flex-direction: column;
+    margin-left:15%;
+    margin-top:5rem;
+    gap:2rem;
+}
+
+.add-container form input {
+    width:400px;
+    height:60px;
+    padding: 20px;
+}
+
+.add-container form select {
+    width:400px;
+    height:60px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+#newinput {
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
 }

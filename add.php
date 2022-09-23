@@ -1,8 +1,21 @@
-<div>
+<header>
+    <link rel="stylesheet" href="css/style.css" />
+</header>
+<div class="header">
+    <h1>Product Add</h1>
+    <div class="header-right">
+        <button id="addbutton" form="addform">Save</button>
+
+        <form action="index.php">
+            <button id="cancel">Cancel</button>
+        </form>
+    </div>
+</div>
+<div class="add-container">
         <form action="create.php" id="addform" method="post">
-            <input type="text" name="SKU" id="SKU" placeholder="input SKU: "></input>
-            <input type="text" name="Name" id="Name" placeholder="input name: "></input>
-            <input type="number" name="Price" id="Price" placeholder="input price: "></input>
+            <input type="text" name="SKU" id="SKU" placeholder="Input SKU: " required></input>
+            <input type="text" name="Name" id="Name" placeholder="Input name: " required></input>
+            <input type="number" name="Price" id="Price" placeholder="Input price: " required></input>
 
             <select name="ProductType" onchange='submitForm(this)'>
                 <option value="" disabled selected>Choose option</option>
@@ -10,8 +23,6 @@
                 <option value="Book">Book</option>
                 <option value="Furniture">Furniture</option>
             </select>
-
-            <button type="submit">Submit</button>
         </form>
     </div>
 
@@ -32,36 +43,41 @@
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Size";
+                input.required;
                 input.id="Size";
-                input.placeholder="input size: ";
+                input.placeholder="Input Size: ";
                 document.getElementById('newinput').appendChild(input);
             }else if(value=="Book"){
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Weight";
+                input.required;
                 input.id="Weight";
-                input.placeholder="input weight: ";
+                input.placeholder="Input Weight: ";
                 document.getElementById('newinput').appendChild(input);
             }else{
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Height";
+                input.required;
                 input.id="Height";
-                input.placeholder="input height: ";
+                input.placeholder="Input Height: ";
                 document.getElementById('newinput').appendChild(input);
 
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Width";
                 input.id="Width";
-                input.placeholder="input width: ";
+                input.required;
+                input.placeholder="Input Width: ";
                 document.getElementById('newinput').appendChild(input);
                 
                 var input = document.createElement("input");
                 input.type="number";
                 input.name="Length";
                 input.id="Length";
-                input.placeholder="input length: ";
+                input.required;
+                input.placeholder="Input Length: ";
                 document.getElementById('newinput').appendChild(input);
             }
         } 
