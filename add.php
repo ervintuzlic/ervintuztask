@@ -13,8 +13,8 @@
 </div>
 <div class="add-container">
         <form action="create.php" id="addform" method="post">
-            <input type="text" name="SKU" id="SKU" placeholder="Input SKU: " required></input>
-            <input type="text" name="Name" id="Name" placeholder="Input name: " required></input>
+            <input type="text" name="SKU" id="SKU" placeholder="Input SKU: " autocomplete="off" required></input>
+            <input type="text" name="Name" id="Name" placeholder="Input name: " autocomplete="off" required></input>
             <input type="number" name="Price" id="Price" placeholder="Input price: " required></input>
 
             <select name="ProductType" onchange='submitForm(this)'>

@@ -7,7 +7,7 @@ $('#delete').click(function(){
        });
        sendResponse(dataArr);
     }else{
-      alert('No record selected ');
+      alert('Please select a Product you want to delete ');
     }
  });  
 

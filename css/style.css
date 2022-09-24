@@ -2,7 +2,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family:sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .header{
     background-color:rgb(22, 22, 22);
@@ -30,7 +30,11 @@
     flex-direction: column;
     justify-content: center;
     height: 150px;
+    gap:0.5rem;
     text-align: center;
+    background-color:rgb(22, 22, 22);
+    border-radius: 5px;
+    color:white;
 }
 .delete-checkbox{
     position: absolute;
@@ -94,19 +98,39 @@
     background-color:rgb(223, 74, 74);
 }
 
+.add-container {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
 .add-container form{
     display:flex;
     flex-direction: column;
-    margin-left:15%;
-    margin-top:5rem;
+    align-content: center;
+    margin-top: 5rem;
     gap:2rem;
+    margin-right:2rem;
 }
 
 .add-container form input {
     width:400px;
     height:60px;
     padding: 20px;
+    background:none;
+    font-weight: bold;
+    font-size:17px;
+    border:none;
+    border: 2px solid rgb(22, 22, 22);
+    border-radius: 5px;
+    background: white;
+    transition: 0.2s ease-in-out;
 }
+.add-container #addform input:focus{
+    outline: none;
+    border-color:rgb(0, 174, 255);
+}
+
 
 .add-container form select {
     width:400px;
@@ -119,4 +143,8 @@
     display:flex;
     flex-direction: column;
     gap:2rem;
+}
+
+.delete-checkbox:hover{
+    cursor:pointer;
 }
